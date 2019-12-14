@@ -13,7 +13,10 @@ Utilizar a biblioteca bull para gerenciar as filas:
 
 > https://github.com/OptimalBits/bull
 
-
 Instalando o redis no docker:
 
 > docker run --name redis -p 6379:6379 -d -t redis:alpine
+
+Para a acessar o bull-board
+
+> http://localhost:3333/admin/queues

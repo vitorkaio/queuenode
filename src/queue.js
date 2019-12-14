@@ -2,6 +2,8 @@
 
 import 'dotenv/config'
 import Queue from './services/lib/Queue'
-import RegistrationMail from './services/jobs/RegistrationMail'
+import * as Sentry from '@sentry/node'
 
-Queue.process(RegistrationMail.handle)
+Sentry.init({ dsn: 'https://aca9379667b44cfa8c79ff233c6acf5b@sentry.io/1857108' })
+
+Queue.process()

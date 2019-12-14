@@ -10,7 +10,10 @@ export const createUser = async (req, res) => {
     }
 
     // Adicionar job RegistrationMail
-    Queue.add({ user })
+    Queue.add('RegistrationMail', { user })
+
+    // User Report
+    Queue.add('UserReport', { user })
 
     return res.json(user)
   } catch (error) {
